@@ -16,7 +16,7 @@ Array.prototype.peek = function(){
 }
 
 function withdraw(containerId){
-    while(stack1.peek() !== false){
+    while(stack1.length > 0){
         if(stack1.peek() === containerId){
             stack1.pop();
         }else{
@@ -24,10 +24,10 @@ function withdraw(containerId){
         }
     }
 
-    while(stack2.peek() !== false){
+    while(stack2.length > 0){
         stack1.push(stack2.pop());
     }
     return stack1;
 }
 
-console.log(withdraw("Id5"));
+console.log(withdraw("Id2"));
