@@ -19,7 +19,7 @@ Array.prototype.peek = function(){
 }
 
 function replace(stack, number1, number2){
-    while(stack.peek() !== false){
+    while(stack.length > 0){
         if(stack.peek() !== number2){
             stack.pop();
         }else{
@@ -31,4 +31,4 @@ function replace(stack, number1, number2){
     console.log(stack);
 }
 
-replace(myStack, 7, 8);
+replace(myStack, 7, 2);
